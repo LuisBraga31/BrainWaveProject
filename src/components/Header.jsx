@@ -2,13 +2,14 @@ import { useLocation } from "react-router-dom";
 
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
+import  Button  from "../components/Button";
 
 export default function Header() {
 
     const pathname = useLocation();
 
   return (
-    <div className="fixed top-0 z-50 bg-n-8/90 backdrop-blur-sm
+    <div className="fixed top-0 z-50 w-full bg-n-8/90 backdrop-blur-sm
          border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
         
         <div className="flex items-center py-2 px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
@@ -32,6 +33,13 @@ export default function Header() {
                     ))}
                 </div>
             </nav>
+
+            <a href="#signup" className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block">
+                New Account
+            </a>
+            <Button className="hidden lg:flex" href="#login">
+                Sign In
+            </Button>
 
         </div>
     </div>
